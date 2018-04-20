@@ -46,7 +46,7 @@ function customer (firstName, lastName, favGenre,address) {
                 // this creates a local function called by the customer object once title paramater is filled
 					function (title){
 // this creates variable book that if it's available the librarian designates by title otherwise false
-                        let book = librarianCheckout(this,title)
+                        let book = librarianCheckout(title)
 // if the book is not false then it populates the bookshelf.                         
                         if(!(book === false)) {
                             this.bookshelf.push(book)
@@ -78,7 +78,7 @@ function customer (firstName, lastName, favGenre,address) {
                         
                         });
                         splice.this.bookshelf(index,1)
-                        librarianCheckin(this,title)
+                        librarianCheckin(title)
                     
                     }
             }
