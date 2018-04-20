@@ -1,5 +1,5 @@
 //the array the catalog of books will be stored in
-const catalog = []
+let catalog = []
 
 //saves the current catalog to local storage
 function saveCatalog(){
