@@ -1,4 +1,4 @@
 const dummyCustomer = {
 	name: 'Dummy Dummy',
-	libraryCard: ''
+	libraryCard: '553328'
 }
