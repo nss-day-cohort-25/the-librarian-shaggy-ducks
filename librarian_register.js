@@ -16,7 +16,6 @@ const registerNewCard = (customerObject) => {
 		storyArray.push(customerObject.first + ' ' + customerObject.last + ' got a new library card, number ' + customerObject.libraryCard + '.')
 	} else {
 		//need to error if existing card found
-		console.log('you already have a card!')
 		storyArray.push(customerObject.first + ' ' + customerObject.last + ' couldn\'t get a new library card because they already have one.')
 	}
 }
