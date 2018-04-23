@@ -13,14 +13,14 @@ function customer (firstName, lastName, favGenre,address) {
 				value: lastName,
 				enumerable:true,
 			
-            },
-        genre:
+			},
+		genre:
 			{
 				value: favGenre,
 				enumerable:true,
 			
-            },
-        address:
+			},
+		address:
 			{
 				value: address,
 				enumerable:true,
@@ -28,59 +28,59 @@ function customer (firstName, lastName, favGenre,address) {
 			},
 		libraryCard:
 			{
-				value: "",
-                enumerable: true,
-                writable: true
+				value: '',
+				enumerable: true,
+				writable: true
 				
 			},
-        bookshelf:
+		bookshelf:
 			{
-                value: [],
+				value: [],
 				enumerable:false,
 				writable:true,
-            },
-            // this creates a function that checks out a book
-        checkout:
+			},
+		// this creates a function that checks out a book
+		checkout:
             {
-                value: 
-                // this creates a local function called by the customer object once title paramater is filled
+            	value: 
+            	// this creates a local function called by the customer object once title paramater is filled
 					function (title){
-// this creates variable book that if it's available the librarian designates by title otherwise false
-                        let book = librarianCheckout(title)
-// if the book is not false then it populates the bookshelf.                         
-                        if(!(book === false)) {
-                            this.bookshelf.push(book)
-                        }
+						// this creates variable book that if it's available the librarian designates by title otherwise false
+						let book = librarianCheckout(title)
+						// if the book is not false then it populates the bookshelf.                         
+						if(!(book === false)) {
+							this.bookshelf.push(book)
+						}
 
 						
 			
-                    },
-                writable: false,
-                enumerable: false,
+					},
+            	writable: false,
+            	enumerable: false,
             },
-        checkIn: 
+		checkIn: 
             {
-                value: 
+            	value: 
                     function (title){
                         
-                        let index = 0   // this creates a variable that notes the possition in an array
-                        let found = false   //this indicates that the book has not been yet found
-                        this.bookshelf.forEach(current => { // this looks for each book in the shelf for the title to return
-                            if(current.title === title){
-                                found = true  // this indicates that the book has now been found
+                    	let index = 0   // this creates a variable that notes the possition in an array
+                    	let found = false   //this indicates that the book has not been yet found
+                    	this.bookshelf.forEach(current => { // this looks for each book in the shelf for the title to return
+                    		if(current.title === title){
+                    			found = true  // this indicates that the book has now been found
 
-                            }
+                    		}
 
-                            if(!found){ // if not found it increases the index possition by 1
-                                index += 1
-                            }
+                    		if(!found){ // if not found it increases the index possition by 1
+                    			index += 1
+                    		}
 
                         
-                        });
-                        splice.this.bookshelf(index,1)
-                        librarianCheckin(title)
+                    	})
+                    	this.bookshelf.splice(index,1)
+                    	librarianCheckIn(title)
                     
                     }
             }
-        })
-    }
+	})
+}
