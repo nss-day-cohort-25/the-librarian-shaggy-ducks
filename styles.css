@@ -33,6 +33,10 @@ img {
 	color: black;
 	font-family: 'Nanum Gothic', sans-serif;
 	width: 300px;
+	text-align: center;
+}
+li {
+	list-style: none;
 }
 
 .genre {
