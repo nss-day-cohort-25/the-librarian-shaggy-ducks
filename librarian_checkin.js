@@ -4,13 +4,12 @@
 
 const librarianCheckIn = (book) => {
 	if (book.checkedOut === false) {
-		console.log('this book is in the library')
+		storyArray.push('Librarian could not check in ' + book.title + ' because it was already checked in.')
 		return false
 	} else {
 		book.checkedOut = false
 		book.dueDate = ''
-		console.log('book received. thank you!')
+		storyArray.push('Librarian checked in ' + book.title)
 		return book
 	}
-
 }
