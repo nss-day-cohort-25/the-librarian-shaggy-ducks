@@ -12,3 +12,26 @@ function loadCatalog(){
 	const databaseString = localStorage.getItem("Library Catalog")
 	catalog = JSON.parse(databaseString)
 }
+
+function determineSave(){
+	//if catalog is empty loads from storage
+	if(catalog.length == 0){
+		loadCatalog()
+	}
+
+	//if not found in storage initializes and saves the catalog
+	if(catalog == null){
+		initializeCatalog()
+		saveCatalog()
+	}else{
+		//if the catalog isn't empty but contains less than th initialed amount of books,
+		//initializes and saves the catalog
+		if(catalog.length < 20){
+			initializeCatalog()
+			saveCatalog()
+		}else{
+			//if it contains more than the initial amount, saves the catalog with no other changes
+			saveCatalog()
+		}
+	}
+}
