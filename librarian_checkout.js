@@ -18,10 +18,10 @@ const librarianCheckout = (book) => {
 	if (book.checkedOut === false) {
 		book.checkedOut = true
 		book.dueDate = calcDueDate()
-		console.log('your book will be due back on ' + calcDueDate())
+		storyArray.push('Librarian checked out ' + book.title + '. It will be due back on ' + book.dueDate + '. Enjoy!')
 		return book
 	} else {
-		console.log('this book is not available right now')
+		storyArray.push('Librarian could not check out ' + book.title + ' because it is not available now.')
 		return false
 	}
 
