@@ -1,4 +1,4 @@
-// creates function named customer that created customer objects
+// creates function named customer that creates customer objects
 function customer (firstName, lastName, favGenre,address) {
 	// these are the fields/object values that the function populates
 	return Object.create({},{
