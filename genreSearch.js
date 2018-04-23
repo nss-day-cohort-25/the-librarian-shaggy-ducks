@@ -12,5 +12,5 @@ const genreSearch = (genre) => {
 	if (searchResults.length === 1) {
 		searchResults.push('No results to display.')
 	}
-	return searchResults
+	storyArray.push(searchResults)
 }
